@@ -20,7 +20,7 @@ module OpenTSDB
       metric_name = options[:metric]
       value       = options[:value].to_f
       tags        = options[:tags].map { |k, v| "#{k}=#{v}" }.join(' ')
-      hostname.   = options[:hostname]
+      hostname    = options[:hostname]
 
       "put #{metric_name} #{timestamp} #{value} #{tags}"
     end
